@@ -1,0 +1,216 @@
+<apex:page showHeader="false" sidebar="false" docType="html-5.0" standardStylesheets="false">
+    <head>
+        <style>
+            .main-container{
+            margin: 20px;
+            padding: 10px;
+            font-family:"Matahari";
+            font-size:20px;
+            }
+            .grid-container {
+            display: grid;
+            column-gap: 10px;
+            grid-template-columns: auto auto auto auto auto;
+            }
+            .grid-item {
+            font-size: 20px;
+            text-align:center;
+            text-decoration-line: underline;
+            }
+            .main-heading{
+            background-color:black;
+            padding-top:10px;
+            height:50px;
+            padding-bottom:45px;
+            color:white;
+            
+            text-align:center;
+            }
+            .block{
+            color:red;
+            }
+            .container-2{
+            background-color:lightgray;
+            padding:15px;
+            color:black;
+            margin-top:15px;
+            margin-bottom:15px;
+            text-align:center;
+            }
+            .grid-container2 {
+            display: grid;
+            justify-content:center;
+            align-content:center;
+            column-gap: 0px;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-Right:250px;
+            margin-top:50px;
+            margin-bottom:50px;
+            grid-auto-flow: column;
+            
+            }
+            .grid-item1{
+            align-items:center;margin-left:30px;justify-content:center;
+            
+            }
+            .grid-item2{
+            align-items:center;font-size:25px;justify-content: center;margin-left:10px;
+            }
+            .grid-item3{
+            align-items:center;font-size:25px;margin-left:50px;justify-content: center;
+            }
+            .grid-container3 {
+            display: grid;
+            justify-content: right;
+            align-content:center;
+            column-gap: 70px;
+            grid-template-columns: 1fr 1fr;
+            margin-left:280px;
+            margin-top:50px;
+            margin-bottom:50px;
+            }
+            .grid-item3-1{
+            align-items:left;justify-content:center;margin-right:30px;font-size:20px;
+            }
+            .grid-item3-2{
+            align-items:right;margin-left:200px;justify-content:center;font-size:20px;
+            }
+            .para{
+            background-color:lightgray;
+            <!--margin:60px; -->
+            padding:20px;
+            font-size:16px;
+            height:70%;
+            width: 70%;
+            margin-top:100px;
+            }
+            .grid-item2-1{
+            align-items:center;justify-content: center;margin-left:400px;font-size:20px;
+            }
+            .grid-item2-2{
+            align-items:center;margin-left:200px;justify-content:center;font-size:20px;
+            }
+            .Line{
+            margin-left:4pc;
+            margin-right:4pc;
+            height:1px;
+            weight:1px;
+            background-color:black;
+            }
+            .grid-container4 {
+            display: grid;
+            justify-content: right;
+            align-content:center;
+            column-gap: 100px;
+            grid-template-columns: 1fr 1fr;
+            margin-left:80px;
+            margin-top:50px;
+            margin-bottom:50px;
+            }
+        </style>
+        <center>
+            <apex:image id="theImage" value="{!$Resource.Thahab_image}" width="500" height="120"/>
+        </center>
+        <br/><br/>
+        <div class="grid-container">
+            <div class="grid-item"><b>CLOTHING</b></div>
+            <div class="grid-item"><b>SHOES</b></div>
+            <div class="grid-item"><b>BAGS</b></div>
+            <div class="grid-item"><b>ACCESSORIES</b></div>
+            <div class="grid-item"><b>JEWELRY</b></div>
+        </div>
+        <br/><br/>
+    </head>
+    <body class="main-container">
+        <div class="main-heading">
+            <h1>
+                YOUR ORDER HAS BEEN DELIVERED
+            </h1>
+        </div><br/>
+        <center><div>
+            <h1><b> Hello [Name]</b></h1>
+            <h2><b>Glad that your order is well received!</b> </h2>
+            <p>We are delighted to confirm that your below order was delivered.</p>
+            </div></center>
+        <div class="container-2">
+            <h2><b>ORDER NUMBER #XXXXXX</b> </h2>
+        </div>
+        <div>
+            <div class="grid-container2">
+                <div class="grid-item1"><apex:image id="theImage1" value="{!$Resource.Black_bag}"/></div>
+                <div class="grid-item2"><b>Aquazzura</b><br/><br/>
+                    Temptation 105<br/>
+                    Crystal-Embellished<br/>
+                    Slingback Sandals<br/><br/>
+                    size: 38<br/><br/>
+                    color: silver<br/> <br/>
+                    Qty: 1</div>
+                <div class="grid-item3"><b>326 KD</b></div>
+            </div>
+            <div class="grid-container2">
+                <div class="grid-item1"><apex:image id="theImage2" value="{!$Resource.Black_bag}"/></div>
+                <div class="grid-item2"><b>Stella McCartney</b><br/><br/>
+                    Falabella Shaggy<br/>
+                    Tote in Faux Leather<br/><br/>
+                    Size: OneSize<br/><br/>
+                    Color: Black<br/> <br/>
+                    Qty: 1</div>
+                <div class="grid-item3"><span class="block">178KD</span><br/><b><span style="text-decoration:line-through">326 KD</span></b></div>
+            </div>
+        </div>
+        <div class="Line">
+        </div>
+        <div class="grid-container3">
+            <div class="grid-item2-1">Subtotal:<br/><br/>
+                Shipping:<br/><br/>
+                <b>Total:</b>
+            </div>
+            <div class="grid-item2-2"> 504 KD<br/><br/>
+                FREE <br/><br/>
+                <b>504 KD</b>
+            </div>
+        </div>
+        <div class="Line">
+        </div>
+        <div class="grid-container4">
+            <div class="grid-item3-1"><b>Shipping Address:</b><br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+                <b>Payment:</b><br/>
+                Card details
+            </div>
+            <div class="grid-item3-2"> <b>Billing Address:</b><br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+                Address Address<br/><br/>
+            </div>
+        </div>
+        <div class="Line">
+        </div>
+        <center><div class="para">
+            <h2>
+                We hope you enjoy these special pieces
+            </h2><br/>
+            <h1>
+                WE’D LOVE TO SEE YOU SHARE YOUR STYLE
+            </h1><br/><br/>
+            <h3>
+                Tag <b>@thahabworld</b>on Instagram
+            </h3><br/><br/>
+            <div class="grid-container2">
+                <div class="grid-item" style=" padding-left:250px"><apex:image id="theImage3" value="{!$Resource.Black_bag}" width="200" height="200"/></div>
+                <div class="grid-item1"><apex:image id="theImage4" value="{!$Resource.Sandel}" width="200" height="200"/></div>
+                
+                <div class="grid-item1"><apex:image id="theImage5" value="{!$Resource.Black_bag}" width="200" height="200"/></div>
+                
+                <div class="grid-item1"><apex:image id="theImage6" value="{!$Resource.Sandel}" width="200" height="200"/></div>
+                
+          
+            </div>
+            </div>
+        </center>
+    </body>
+</apex:page>
